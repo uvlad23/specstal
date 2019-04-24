@@ -1,0 +1,56 @@
+.advantages{
+    text-align: center;
+    h2{
+        padding-top:138px;
+        padding-bottom:98px;
+    }
+    h3{
+        padding-top:69px;
+        font-size:24px;
+        margin: 0;
+    }
+    p{
+        margin: 45px 0 0 0;
+        color:#b2b2b2;
+        font-weight: 300;
+    }
+    ul{
+        padding-left:0;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom:140px;
+    }
+    .mid__block{
+        position: relative;
+    }
+    .blue__line{
+        top:465px;
+        left:37%;
+        position: absolute;
+        height: 1px;
+        width: 85px;
+        background-color: #00a3ef;
+    }
+    li{
+        width: 290px;
+    }
+    .durable{
+        background-image: url(../../i/advantages/durable.png);
+        margin:0 auto;
+        width: 142px;
+        height: 142px;
+    }
+    .delivery{
+        background-image: url(../../i/advantages/delivery.png);
+        margin:0 auto;
+        width: 138px;
+        height: 142px;
+    }
+    .price{
+        background-image: url(../../i/advantages/price.png);
+        margin:0 auto;
+        width: 137px;
+        height: 142px;
+    }
+}

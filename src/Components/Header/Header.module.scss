@@ -1,0 +1,134 @@
+.header{
+    display: flex;
+    justify-content: flex-start;
+    padding-top:25px;
+    color:white;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    padding-right: 43px;
+    &__link{
+        color:white;
+        text-decoration: none;
+    }
+    
+}
+
+.logo__pic{
+    background-image: url('../../i/logo.png');
+    width: 50px;
+    height: 50px;
+    margin-right: 13px;
+}
+
+.logo__text{
+    font-size: 36px;
+    position:relative;
+}
+
+.line{
+    left:255px;
+    top: 16px;
+    position: absolute;
+    height: 25px;
+    width: 1px;
+    background-color: #fff;
+}
+
+
+.menu{
+    font-size:24px;
+    margin: 11px 0 0 70px;
+    padding: 0;
+    list-style-type:none;
+    display:flex;
+    a{
+        color:white;
+        text-decoration: none;
+        margin-right:84px;
+    }
+    
+    li:hover{
+        border-bottom:2px solid rgba(0,163,239,.62);
+    }
+    .download{
+        background:rgba(0,163,239,.62);
+        padding:20px;
+        margin-top:-19px;
+        transition:all .44s ease;
+    }
+    .download:hover{
+        background: rgba(0,163,239,1);
+    }
+}
+.contacts{
+    font-size:16px;
+    margin-top:12px;
+}
+
+@media screen and (max-width: 1572px){
+    .logo{
+        &__text{
+            font-size:24px;
+            margin-top:9px;
+        };
+    }
+
+    .line{
+        left:190px;
+        top:6px;
+    }
+
+    .menu{
+        font-size:18px;
+        margin: 15px 0 0 70px;
+        a{
+            margin-right:50px;
+        }
+    }
+    .contacts{
+        font-size:12px;
+    }
+
+    .download{
+        padding:10px;
+    }
+    .contacts{
+        margin-top:14px;
+    }
+  }
+  @media screen and (max-width: 1170px){
+    .logo{
+        padding-right:0;
+    }
+    .menu{
+        margin-left:40px;
+        a{
+            margin-right:25px;
+        }
+    }
+    .line{
+        left:150px;
+    }
+  }
+
+  @media screen and (max-width: 992px){
+    .menu{display:none;}
+    .trigger{
+      display:inline-block;
+      margin:3px;
+      cursor:pointer;
+     }
+     .trigger i{
+       display:block;
+       width:30px;
+       height:6px;
+       margin:4px auto;
+       background:#fff;
+     }
+     .show{
+       display:block;
+     }
+  }
