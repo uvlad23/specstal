@@ -1,0 +1,35 @@
+.container{
+    max-width: 1572px;
+    margin: 0 auto;
+  }
+  
+  @media screen and (min-height: 1024px){
+    .offer__bg{
+      height: 1024px;
+    }
+  }
+  
+  @media screen and (max-width: 1572px){
+    .container{
+      max-width: 1270px;
+    }
+  }
+  
+  @media screen and (max-width: 1270px){
+    .container{
+      max-width: 992px;
+    }
+  }
+  @media screen and (max-width: 992px){
+    .container{
+      max-width: 650px;
+    }
+  }
+  @media screen and (max-width: 650px){
+    .container{
+      max-width: 355px;
+      padding-left:10px;
+      padding-right:10px;
+      overflow: hidden;
+    }
+  }

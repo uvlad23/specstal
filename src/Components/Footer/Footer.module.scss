@@ -59,6 +59,15 @@
 .imgs__item{
     height: 35px;
     margin-right: 15px;
+    filter: gray; /* IE5+ */
+    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: all .2s ease-in-out;
+}
+
+.imgs__item:hover{
+    filter: none;
+      -webkit-filter: grayscale(0);
+      -webkit-transform: scale(1);
 }
 
 .contacts{
@@ -101,5 +110,42 @@
 @media screen and (max-width: 1170px){
     .copyright{
         display: none;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .imgs{
+        display: none;
+    }
+    .line{
+        left:180px;
+    }
+    .author,.contacts{
+        margin-top:10px;
+    }
+}
+@media screen and (max-width: 650px){
+    .logo{
+        display: none;
+    }
+    .contacts,.author{
+        margin-top:0;
+        text-align: left;
+    }
+    .author{
+        margin-right:10px;
+        text-align: center;
+    }
+    .line{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .contacts{
+        text-align: center;
+    }
+    .author{
+        margin-right:0;
     }
 }

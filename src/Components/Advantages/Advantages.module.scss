@@ -6,11 +6,11 @@
     }
     h3{
         padding-top:69px;
+        padding-bottom:45px;
         font-size:24px;
         margin: 0;
     }
     p{
-        margin: 45px 0 0 0;
         color:#b2b2b2;
         font-weight: 300;
     }
@@ -52,5 +52,78 @@
         margin:0 auto;
         width: 137px;
         height: 142px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .advantages{
+        ul{
+            flex-direction: column;
+            align-items: center;
+            padding-bottom:80px;
+        }
+        li{
+            width: 400px;
+            margin-bottom: 50px;
+        }
+        .durable, .delivery,.price{
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 200px;
+            height: 200px;
+        }
+        h2{
+            font-size:40px;
+        }
+        h3{
+            font-size: 32px;
+        }
+        p{
+            font-size:24px;
+        }
+        .blue__line{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 650px){
+    .advantages{
+        ul{
+            padding-bottom:40px;
+        }
+        li{
+            width: 320px;
+            margin-bottom: 50px;
+        }
+        h2{
+            
+            padding-top:80px;
+            padding-bottom:80px;
+        }
+        h3{
+            font-size:28px;
+        }
+        p{
+            font-size:18px;
+
+        }
+        .durable,.delivery,.price{
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px){
+    .advantages{
+        h2{
+            font-size:26px;
+        }
+        h3{
+            font-size:21px;
+            padding-top:30px;
+            padding-bottom:10px;
+        }
     }
 }

@@ -1,42 +1,59 @@
 import React from 'react'
 import classes from './Header.module.scss'
+import {NavLink} from 'react-router-dom'
+import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 
-const Header = props =>{
-    //document.getElementById("trigger").onclick = function() {open()};
+class Header extends React.Component{
+    
 
-    // function open() {
-    //     document.getElementById("menu").classList.toggle("show");
-    // }
-    return(
-        <div className = {classes.header}>
-            <a href="#" className={classes.logo__link}>
-            <div className={classes.logo}>
-                    <div className={classes.logo__pic}></div>
-                    <div className={classes.logo__text}>СпецСталь
-                    <div className={classes.line}></div>
+    state = {
+        isClicked:false
+    }
+    open() {
+        this.menu.classList.toggle("show");
+    }
+
+    render(props){
+        if (!this.props.isOffer){
+            return(
+                <div>                
+                <div className = {classes.header}>
+                    <div className= {classes.drawer_toggle}>
+                        <DrawerToggleButton click = {this.props.drawerClickHandler}/>
                     </div>
+                    <NavLink to="/" className={classes.logo__link}>
+                    <div className={classes.logo}>
+                            <div className={classes.logo__pic}></div>
+                            <div className={classes.logo__text}>СпецСталь
+                            <div className={classes.line}></div>
+                            </div>
+                        </div>
+                    </NavLink>
+
+                    <div>
+                        <nav className={classes.menu}>
+                            <NavLink to="/" exact activeClassName = {classes.active} className={classes.menu__item}><div>Главная</div></NavLink>
+                            <NavLink to="/products" activeClassName = {classes.active} className={classes.menu__item}><div>Продукция</div></NavLink>
+                            <NavLink to="/contact" activeClassName = {classes.active} className={classes.menu__item}><div>Контакты</div></NavLink>
+                        </nav>
+                    </div>
+                    <NavLink to="/download" className={classes.download} activeClassName = {classes.active}><div>Скачать прайс <i className="fas fa-file-download"></i></div></NavLink>
+                    <div className={classes.contacts}>
+                        <div className={classes.contacts__address}><i className="fas fa-map-marker-alt"></i> ул.Войкова 58а. г. Никополь</div>
+                        <div className={classes.contacts__phone}><i className="fas fa-phone"></i> +380 (67) 632 47 85</div>
+                    </div>
+                    <a className={classes.make_call} href="tel:+380676324785"><i className="fas fa-phone"></i></a>
                 </div>
-            </a>
-            <div className={classes.nav}>
-            <span id="trigger" className={classes.trigger}>
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
-                <ul className={classes.menu}>
-                    <a href="#"><li>Главная</li></a>
-                    <a href="#"><li>Продукция</li></a>
-                    <a href="#"><li>Контакты</li></a>
-                    <a href="#" className={classes.download}><div>Скачать прайс <i className="fas fa-file-download"></i></div></a>
-                </ul>
-            </div>
-            
-            <div className={classes.contacts}>
-                <div className={classes.contacts__address}><i className="fas fa-map-marker-alt"></i> ул.Войкова 58а. г. Никополь</div>
-                <div className={classes.contacts__phone}><i className="fas fa-phone"></i> +380 (67) 632 47 85</div>
-            </div>
-        </div>
-    )
+                <div className={classes.burger}>
+                
+                </div>
+                </div> 
+            )
+        } else{
+            return null
+        }
+    }
+    
 }
 
 export default Header

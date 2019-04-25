@@ -27,3 +27,30 @@
     }
 
 }
+@media screen and (max-width: 650px){
+    .offer{
+        padding-top:30%;
+        h1{
+            font-size:32px;
+        }
+        p{
+            
+            font-size:17px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px){
+    .offer{
+        h1{
+            font-size:28px;
+        }
+        p{
+            font-size:16px;
+            margin-top:25px;
+        }
+        a{
+            margin-top:50px;
+        }
+    }
+}
