@@ -17,11 +17,11 @@ const Footer = props =>{
             <div className={classes.information}>
                 <div className={classes.copyright}>ЧП “Спецсталь” © 2003-{year}</div>
                 <div className={classes.imgs}>
-                    <a href="https://hostiq.ua/wiki/ssl-certificate/"><img src={require('../../i/information/ssl-secure.png')} alt="" className = {classes.imgs__item}/></a>
-                    <a href="https://novaposhta.ua/delivery"><img src={require('../../i/information/np.jpg')} alt="" className = {classes.imgs__item}/></a>
-                    <a href="https://intime.ua/ua-calc"><img src={require('../../i/information/in-time.jpg')} alt="" className = {classes.imgs__item}/></a>
-                    <a href="https://www.delivery-auto.com/ru-RU/CalculateCost"><img src={require('../../i/information/delivery-auto.png')} alt="" className = {classes.imgs__item}/></a>
-                    <a href="https://www.sat.ua/ua/order/calculation/"><img src={require('../../i/information/sat.jpg')} alt="" className = {classes.imgs__item}/></a>
+                    <a href="https://hostiq.ua/wiki/ssl-certificate/" target="_blank" rel="noopener noreferrer"><img src={require('../../i/information/ssl-secure.png')} alt="" className = {classes.imgs__item}/></a>
+                    <a href="https://novaposhta.ua/delivery" target="_blank" rel="noopener noreferrer"><img src={require('../../i/information/np.jpg')} alt="" className = {classes.imgs__item}/></a>
+                    <a href="https://intime.ua/ua-calc" target="_blank" rel="noopener noreferrer"><img src={require('../../i/information/in-time.jpg')} alt="" className = {classes.imgs__item}/></a>
+                    <a href="https://www.delivery-auto.com/ru-RU/CalculateCost" target="_blank" rel="noopener noreferrer"><img src={require('../../i/information/delivery-auto.png')} alt="" className = {classes.imgs__item}/></a>
+                    <a href="https://www.sat.ua/ua/order/calculation/" target="_blank" rel="noopener noreferrer"><img src={require('../../i/information/sat.jpg')} alt="" className = {classes.imgs__item}/></a>
                 </div>
             </div>
             <div className={classes.author}>Дизайн&Разработка:<br/><a href ='http://t.me/vladislav_ulyanenko'>Владислав Ульяненко</a></div>

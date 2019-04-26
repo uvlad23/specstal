@@ -1,14 +1,18 @@
 import React from 'react'
 import classes from './Offer.module.scss'
 import { NavLink } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Offer = props =>{
     return(
         <div className={classes.offer}>
-        <h1 className={classes.offer__title}>Инструментальная сталь</h1>
-        <p className={classes.offer__text}>Купи у надежного поставщика с доставкой<br/>
+        <h1 className={classes.offer__title} data-aos="fade-right" data-aos-duration="1000">Инструментальная сталь</h1>
+        <p className={classes.offer__text} data-aos="fade-right" data-aos-duration="1000">Купи у надежного поставщика с доставкой<br/>
         по всей Украине и отгрузкой в тот же день</p>
-        <div className={classes.offer__btn}><NavLink to="/products">Узнать больше</NavLink></div>
+        <div className={classes.offer__btn} data-aos="fade-right" data-aos-duration="1000"><NavLink to="/products">Узнать больше</NavLink></div>
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './Header.module.scss'
 import {NavLink} from 'react-router-dom'
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
+import Logo from '../Logo/Logo'
 
 class Header extends React.Component{
     
@@ -21,14 +22,8 @@ class Header extends React.Component{
                     <div className= {classes.drawer_toggle}>
                         <DrawerToggleButton click = {this.props.drawerClickHandler}/>
                     </div>
-                    <NavLink to="/" className={classes.logo__link}>
-                    <div className={classes.logo}>
-                            <div className={classes.logo__pic}></div>
-                            <div className={classes.logo__text}>СпецСталь
-                            <div className={classes.line}></div>
-                            </div>
-                        </div>
-                    </NavLink>
+
+                    <Logo/>
 
                     <div>
                         <nav className={classes.menu}>

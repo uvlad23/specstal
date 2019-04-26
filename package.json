@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "classnames": "^2.2.6",
     "jquery": "^3.4.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-burger-menu": "^2.6.10",
     "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8"
   },

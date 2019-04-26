@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from "react-helmet";
 
 import classes from './MainPage.module.scss'
 
@@ -11,8 +12,7 @@ import SideDrawer from '../../../Components/SideDrawer/SideDrawer'
 import BackDrop from '../../../Components/BackDrop/BackDrop'
 
 import utility from '../Container.module.scss'
-
-import $ from "jquery";
+import $ from 'jquery'
 
 class App extends Component {
   state ={
@@ -29,17 +29,6 @@ class App extends Component {
     this.setState({sideDrawerOpen:false});
   }
 
-  // offerMouseMoveHandler =(e) =>{
-  //   var movementStrength = 25;
-  //   var height = movementStrength / $(window).height();
-  //   var width = movementStrength / $(window).width();
-  //   var pageX = e.pageX - ($(window).width() / 2);
-  //   var pageY = e.pageY - ($(window).height() / 2);
-  //   var newvalueX = width * pageX * -1 - 25;
-  //   var newvalueY = height * pageY * -1 - 50;
-  //   $('#top-image').css("background-position", newvalueX+"px"+newvalueY+"px");
-  // }
-
   render() {
     let backdrop;
 
@@ -48,8 +37,22 @@ class App extends Component {
     }
     return (
       <div className={classes.mainPage}>
-
-        <div className={classes.offer__bg} data-scale="1.1">
+        <Helmet>
+        <title>СпецСталь | Главная</title>
+        <meta name="description" itemprop="description" content="Металлобаза Никополь. ЧП Спецсталь - крупнейший участник рынка по продаже металлопрокат инструментальная сталь. Оптовая и розничная торговля металлом."></meta>
+        <meta name="keywords" itemprop="keywords" content="&quot;купить металлопрокат Киев&quot;,
+        &quot;металлобаза&quot;,
+        &quot;купить металлопрокат&quot;,
+        &quot;металлопрокат&quot;,
+        &quot;ХВГ&quot;,
+        &quot;Х12&quot;,
+        &quot;Х6ВФ&quot;
+        &quot;3Х3М3Ф&quot;,
+        &quot;ЧП Спецсталь&quot;,
+        &quot;спецсталь&quot;,
+        &quot;0676324785&quot;,"></meta>
+      </Helmet>
+        <div className={classes.offer__bg}>
           <div className={utility.container}>
             <Header drawerClickHandler = {this.drawerToggleClickHandler}/>
             <SideDrawer show = {this.state.sideDrawerOpen}/>
