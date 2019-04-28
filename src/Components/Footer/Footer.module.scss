@@ -107,7 +107,17 @@
 }
 }
 
-@media screen and (max-width: 1170px){
+
+@media screen and (max-width: 1572px){
+    .copyright{
+        margin-top:0px;
+    }
+    .author,.contacts{
+        margin-top:7px;
+    }
+}
+
+@media screen and (max-width: 1270px){
     .copyright{
         display: none;
     }

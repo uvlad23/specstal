@@ -7,11 +7,12 @@ import Header from '../../../Components/Header/Header'
 import Footer from '../../../Components/Footer/Footer'
 import SideDrawer from '../../../Components/SideDrawer/SideDrawer'
 import BackDrop from '../../../Components/BackDrop/BackDrop'
+import { link } from 'fs';
 
 
 class Products extends React.Component{
     state ={
-        sideDrawerOpen:false,
+        myData:null
       }
 
       drawerToggleClickHandler = () =>{
@@ -23,6 +24,23 @@ class Products extends React.Component{
       backdropClickHandler = () => {
         this.setState({sideDrawerOpen:false});
       }
+    componentDidMount(){
+        fetch('https://specstal-backend.firebaseio.com/features.json')
+            .then(res=>res.json())
+            .then(json=>this.setState({myData: json}))
+    }
+
+    fetchData(){
+        
+
+        if(this.state.myData){
+            return this.state.myData.map(item => (
+                <li>The Price is {item.properties.Price ? item.properties.Price : 'NoData'}The Category is {item.properties.Amount ? item.properties.Amount: 'NoAmount'}</li>
+            ))
+        }else{
+            return 'Data is loading'
+        }
+    }
 
     render(props){
         let backdrop;
@@ -40,7 +58,10 @@ class Products extends React.Component{
                     </div>
                 </div>
                 <div className={utility.container}>
-                    <p>Тут будут продукты</p>
+                <ul>
+                    {this.fetchData()}
+                </ul>
+                    Hello world!
                 </div>
                 <footer>
                     <div className={utility.container}>
