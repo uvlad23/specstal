@@ -14,9 +14,9 @@ const Products = props => {
                 <li data-aos="slide-up" data-aos-duration="1000">
                     <h3>Круг</h3>
                     <div className={classes.products__link}>
-                    <img src={require('../../i/products/krug.png')} alt="Полоса" className = {classes.products__image}/>
+                    <img src={require('../../i/products/krug.png')} alt="Круг" className = {classes.products__image}/>
                     <div className={classes.products__overlay}>
-                        <NavLink to='/products' className={classes.products__button}>Купить</NavLink>
+                        <NavLink to='/products/krug' className={classes.products__button}>Купить</NavLink>
                     </div>
                     </div>
                 </li>
@@ -32,18 +32,18 @@ const Products = props => {
                 <li data-aos="slide-up" data-aos-duration="1000">
                     <h3>Квадрат</h3>
                     <div className={classes.products__link}>
-                        <img src={require('../../i/products/kvadrat.png')} alt="Полоса" className = {classes.products__image}/>
+                        <img src={require('../../i/products/kvadrat.png')} alt="Квадрат" className = {classes.products__image}/>
                         <div className={classes.products__overlay}>
-                            <NavLink to='/products' className={classes.products__button}>Купить</NavLink>
+                            <NavLink to='/products/kvadrat' className={classes.products__button}>Купить</NavLink>
                         </div>
                     </div>
                 </li>
                 <li data-aos="slide-up" data-aos-duration="1000">
                     <h3>Поковка</h3>
                     <div className={classes.products__link}>
-                        <img src={require('../../i/products/pokovka.png')} alt="Полоса" className = {classes.products__image}/>
+                        <img src={require('../../i/products/pokovka.png')} alt="Поковка" className = {classes.products__image}/>
                         <div className={classes.products__overlay}>
-                            <NavLink to='/products' className={classes.products__button}>Купить</NavLink>
+                            <NavLink to='/products/pokovka' className={classes.products__button}>Купить</NavLink>
                         </div>
                     </div>
                 </li>

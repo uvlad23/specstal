@@ -1,0 +1,18 @@
+  a{
+    color:black;
+    text-decoration: none;
+    
+  }
+  .active{
+    color:blue;
+    font-size:20px;
+  }
+
+  .products__nav{
+    list-style: none;
+    padding-left:0;
+    width: 300px;
+    li{
+        margin:10px 0;
+    }
+  }

@@ -7,12 +7,16 @@ import Header from '../../../Components/Header/Header'
 import Footer from '../../../Components/Footer/Footer'
 import SideDrawer from '../../../Components/SideDrawer/SideDrawer'
 import BackDrop from '../../../Components/BackDrop/BackDrop'
-import { link } from 'fs';
+
+import ProductsTable from '../../../Components/ProductsTable/ProductsTable'
+import ProductsNav from '../../../Components/ProductsNav/ProductsNav'
+
 
 
 class Products extends React.Component{
     state ={
         myData:null
+
       }
 
       drawerToggleClickHandler = () =>{
@@ -25,22 +29,11 @@ class Products extends React.Component{
         this.setState({sideDrawerOpen:false});
       }
     componentDidMount(){
-        fetch('https://specstal-backend.firebaseio.com/features.json')
+        fetch('https://specstal-backend.firebaseio.com/products.json')
             .then(res=>res.json())
             .then(json=>this.setState({myData: json}))
     }
 
-    fetchData(){
-        
-
-        if(this.state.myData){
-            return this.state.myData.map(item => (
-                <li>The Price is {item.properties.Price ? item.properties.Price : 'NoData'}The Category is {item.properties.Amount ? item.properties.Amount: 'NoAmount'}</li>
-            ))
-        }else{
-            return 'Data is loading'
-        }
-    }
 
     render(props){
         let backdrop;
@@ -58,10 +51,21 @@ class Products extends React.Component{
                     </div>
                 </div>
                 <div className={utility.container}>
-                <ul>
-                    {this.fetchData()}
-                </ul>
-                    Hello world!
+                    <div className={classes.products__info}>
+                        <ProductsNav/>
+                        <div className={classes.products__table}>
+                            <hr/>
+                                <div className={classes.products__table__header}>
+                                    <img src={require('../../../i/300.png')} alt="PlaceHolder"/>
+                                    <div>
+                                    <h2>{this.props.category}</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolorem ipsa accusantium velit veritatis, id dolorum earum quae necessitatibus sint hic numquam architecto laborum repudiandae voluptas molestias. Saepe, optio in.</p>
+                                    </div>
+                                </div>
+                            <hr/>
+                            <ProductsTable data = {this.state.myData} category = {this.props.category}/>
+                        </div>
+                    </div>
                 </div>
                 <footer>
                     <div className={utility.container}>

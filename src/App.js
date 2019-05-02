@@ -3,7 +3,7 @@ import React from 'react'
 import MainPage from './Layout/App/MainPage/MainPage';
 import Contact from './Layout/App/Contact/Contact';
 import Products from './Layout/App/Products/Products'
-import {Route} from 'react-router-dom'
+import { Redirect,Switch,Route} from 'react-router-dom'
 
 
 class App extends React.Component{
@@ -13,9 +13,16 @@ class App extends React.Component{
     render(props){
         return(
             <div className="app">
-                <Route path exact = '/' render = {() => <MainPage/>}/>
-                <Route path = '/contact' render={() => {return (<Contact/>)}}/>
-                <Route path = '/products' render ={() => <Products/>}/>
+                <Switch>
+                    <Route path  = '/products/polosa' render ={() => <Products category = "Полоса"/>}/>
+                    <Route path  = '/products/pokovka' render ={() => <Products category = "Поковка"/>}/>
+                    <Route path  = '/products/kvadrat' render = {() => <Products category = "Квадрат"/>}/>
+                    <Route path  = '/products/krug' render = {() => <Products category = "Круг"/>}/>
+                    <Route path = '/products/krug-blin' render = {() => <Products category = "Круг-блин"/>}/>
+                    <Route path exact = '/' render = {() => <MainPage/>}/>
+                    <Route path = '/contact' render={() => {return (<Contact/>)}}/>
+                    <Route path  = '/products' render ={() => <Redirect to = '/products/polosa'/>}/>
+                </Switch>
             </div>
         )
     }
