@@ -1,6 +1,8 @@
 table{
-    margin:10px auto;
     width: 100%;
+    transition: all 1s ease;
+    margin-bottom:100px;
+    table-layout: fixed;
     th{
         background: #ccc;
         padding:5px;
@@ -8,5 +10,17 @@ table{
     }
     td{
         border:1px solid #ccc;
+        word-wrap:break-word
+    }
+    .skeleton{
+        width: 100%;
+    }
+}
+@media screen and (max-width:650px){
+    table{
+        font-size:14px;
+        th{
+            font-size:14px;
+        }
     }
 }

@@ -1,9 +1,12 @@
 import React from 'react'
-import classes from './ContactsData.module.scss'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
-AOS.init();
+AOS.init({
+    disable: function() {
+      return /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
+    }
+});
 
 const ContactsData = props => (
     <div data-aos="fade-right" data-aos-duration="1000">

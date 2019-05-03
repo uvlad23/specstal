@@ -12,7 +12,6 @@ import SideDrawer from '../../../Components/SideDrawer/SideDrawer'
 import BackDrop from '../../../Components/BackDrop/BackDrop'
 
 import utility from '../Container.module.scss'
-import $ from 'jquery'
 
 class App extends Component {
   state ={
@@ -29,6 +28,10 @@ class App extends Component {
     this.setState({sideDrawerOpen:false});
   }
 
+  componentDidMount(){
+    window.scrollTo(0,0);
+}
+
   render() {
     let backdrop;
 
@@ -38,8 +41,8 @@ class App extends Component {
     return (
       <div className={classes.mainPage}>
         <Helmet>
-        <title>СпецСталь | Главная</title>
-        <meta name="description" itemprop="description" content="Металлобаза Никополь. ЧП Спецсталь - крупнейший участник рынка по продаже металлопрокат инструментальная сталь. Оптовая и розничная торговля металлом."></meta>
+        <title>Инструментальная сталь в Никополе с доставкой по всей Украине | СпецСталь</title>
+        <meta name="description" itemprop="description" content="Металлобаза Никополь. СпецСталь - крупнейший участник рынка по продаже металлопрокат инструментальная сталь. Оптовая и розничная торговля металлом."></meta>
         <meta name="keywords" itemprop="keywords" content="&quot;купить металлопрокат Киев&quot;,
         &quot;металлобаза&quot;,
         &quot;купить металлопрокат&quot;,
@@ -51,8 +54,15 @@ class App extends Component {
         &quot;ЧП Спецсталь&quot;,
         &quot;спецсталь&quot;,
         &quot;0676324785&quot;,"></meta>
+        <meta property="og:title" content="Инструментальная сталь в Никополе с доставкой по всей Украине | СпецСталь"/>
+        <meta property="og:site_name" content="СпецСталь - металлобаза инструментальной стали в Никополе"/>
+        <meta property="og:url" content="specstal.pp.ua"/>
+        <meta property="og:description" content="Металлобаза Никополь. СпецСталь - крупнейший участник рынка по продаже металлопрокат инструментальная сталь. Оптовая и розничная торговля металлом."/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content=""/>        
       </Helmet>
         <div className={classes.offer__bg}>
+        <img src={require('../../../i/offer-bg.jpg')} alt="Фон" style = {{display:'none'}}/>
           <div className={utility.container}>
             <Header drawerClickHandler = {this.drawerToggleClickHandler}/>
             <SideDrawer show = {this.state.sideDrawerOpen}/>

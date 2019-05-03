@@ -1,0 +1,43 @@
+.products__table{
+    &__header{
+      display: flex;
+      margin-bottom:5px;
+      img{
+        width: 300px!important;
+        align-self: center;
+      }
+      p{
+        width: 100%;
+    }
+    h2{
+      font-size:36px;
+      margin-bottom:40px;
+    }
+      div{
+        margin-left:10px;
+      }
+    }
+  }
+  
+  hr {
+    color: black;
+    background-color: black;  
+  }
+  
+  
+
+  @media screen and (max-width:650px){
+ .products__table{
+  &__header{
+    flex-direction: column;
+    h2{
+      display: none;
+    }
+    img{
+      margin-top:10px;
+    }
+  }
+  
+ }
+  }
+  

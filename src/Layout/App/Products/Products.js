@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './Products.module.scss'
+import { Helmet } from "react-helmet";
 
 import utility from '../Container.module.scss'
 
@@ -10,6 +11,8 @@ import BackDrop from '../../../Components/BackDrop/BackDrop'
 
 import ProductsTable from '../../../Components/ProductsTable/ProductsTable'
 import ProductsNav from '../../../Components/ProductsNav/ProductsNav'
+import ProductsTableHeader from '../../../Components/ProductsTableHeader/ProductsTableHeader';
+
 
 
 
@@ -29,6 +32,7 @@ class Products extends React.Component{
         this.setState({sideDrawerOpen:false});
       }
     componentDidMount(){
+        window.scrollTo(0,0);
         fetch('https://specstal-backend.firebaseio.com/products.json')
             .then(res=>res.json())
             .then(json=>this.setState({myData: json}))
@@ -42,7 +46,30 @@ class Products extends React.Component{
         backdrop = <BackDrop click = {this.backdropClickHandler}/>
         }
         return(
+            
             <div className = {classes.products}>
+            <Helmet>
+                <title>Каталог инструментальной стали - {this.props.category}, купить в Никополе и по Украине | СпецСталь</title>
+                <meta name="description" itemprop="description" content="Металлобаза Никополь. СпецСталь - крупнейший участник рынка по продаже металлопрокат инструментальная сталь. Оптовая и розничная торговля металлом."></meta>
+                <meta name="keywords" itemprop="keywords" content="&quot;купить металлопрокат Киев&quot;,
+                &quot;металлобаза&quot;,
+                &quot;купить металлопрокат&quot;,
+                &quot;металлопрокат&quot;,
+                &quot;ХВГ&quot;,
+                &quot;Х12&quot;,
+                &quot;Х6ВФ&quot;
+                &quot;3Х3М3Ф&quot;,
+                &quot;ЧП Спецсталь&quot;,
+                &quot;спецсталь&quot;,
+                &quot;0676324785&quot;,">
+                </meta>
+                <meta property="og:title" content="Каталог инструментальной стали - {this.props.category}, купить в Никополе и по Украине | СпецСталь"/>
+                <meta property="og:site_name" content="СпецСталь - металлобаза инструментальной стали в Никополе"/>
+                <meta property="og:url" content="specstal.pp.ua"/>
+                <meta property="og:description" content="Металлобаза Никополь. СпецСталь - крупнейший участник рынка по продаже металлопрокат инструментальная сталь. Оптовая и розничная торговля металлом."/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:image" content=""/>
+            </Helmet>
                 <div className={classes.black__bg} data-scale="1.1">
                     <div className={utility.container}>
                         <Header drawerClickHandler = {this.drawerToggleClickHandler}/>
@@ -54,15 +81,7 @@ class Products extends React.Component{
                     <div className={classes.products__info}>
                         <ProductsNav/>
                         <div className={classes.products__table}>
-                            <hr/>
-                                <div className={classes.products__table__header}>
-                                    <img src={require('../../../i/300.png')} alt="PlaceHolder"/>
-                                    <div>
-                                    <h2>{this.props.category}</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolorem ipsa accusantium velit veritatis, id dolorum earum quae necessitatibus sint hic numquam architecto laborum repudiandae voluptas molestias. Saepe, optio in.</p>
-                                    </div>
-                                </div>
-                            <hr/>
+                            <ProductsTableHeader category = {this.props.category}/>
                             <ProductsTable data = {this.state.myData} category = {this.props.category}/>
                         </div>
                     </div>

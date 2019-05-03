@@ -24,12 +24,12 @@
         display: block;
         width: 100%;
         height: auto;
-        transition: .5s ease;
+        transition: .22s ease;
         backface-visibility: hidden;
       }
       
       .products__overlay {
-        transition: .5s ease;
+        transition: .22s ease;
         opacity: 0;
         position: absolute;
         top: 50%;
@@ -53,7 +53,7 @@
         color: white;
         font-size: 16px;
         padding: 16px 32px;
-        transition:all .44s ease;
+        transition:all .22s ease;
       }
       .products__button:hover{
         background-color:rgba(0,163,239,1);

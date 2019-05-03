@@ -3,7 +3,11 @@ import classes from './Advantages.module.scss'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
-AOS.init();
+AOS.init({
+    disable: function() {
+      return /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
+    }
+});
 
 const Advantages = props =>{
     return(

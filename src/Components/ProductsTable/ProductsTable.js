@@ -1,43 +1,42 @@
 import React from 'react'
-import classes from './ProductsTable.module.scss'
+import './ProductsTable.module.scss'
+
+import Skeleton from 'react-loading-skeleton';
 
 class ProductsTable extends React.Component{
     fetchData(){
-        
-
-        if(this.props.data){
             return this.props.data.map(item => {
                 if(item.category === this.props.category){
                     return(
-                        <tr>
-                            <td>{item.measures ? item.measures : '-'}</td>
-                            <td>{item.pieces ? item.pieces : '-' }</td>
-                            <td>{item.steeltype ? item.steeltype : '-'}</td>
-                            <td>{item.weight ? item.weight : '-'}</td>
-                            <td>{item.price ? item.price : '-'}</td>
-                        </tr>
+                    <tr>
+                        <td>{item.measures ? item.measures : '-'}</td>
+                        <td>{item.pieces ? item.pieces : '-' }</td>
+                        <td>{item.steeltype ? item.steeltype : '-'}</td>
+                        <td>{item.weight ? item.weight : '-'}</td>
+                        <td>{item.price ? item.price : '-'}</td>
+                    </tr>
                 )
                 }
-                return null
             }
-            )
-        }else{
-            return 'Data is loading'
-        }
+        )
     }
     render(){
-        return(
-            <table style = {{textAlign:'center'}}>
-            <tr>
-                <th>Размер</th>
-                <th>Количество/шт.</th>
-                <th>Тип стали</th>
-                <th>Количество/кг.</th>
-                <th>Цена тонна с НДС</th>
-            </tr>
-                {this.fetchData()}
-        </table>
-        )
+        if (this.props.data){
+            return(
+                <table style = {{textAlign:'center'}}>
+                <tr>
+                    <th>Размер</th>
+                    <th>шт.</th>
+                    <th>Тип стали</th>
+                    <th>В наличии/т.</th>
+                    <th>Цена/т. с НДС</th>
+                </tr>
+                    {this.fetchData()}
+            </table>
+            )
+        } else{
+            return <Skeleton count = {30} height = {30} />
+        }
     }
 }
 export default ProductsTable
