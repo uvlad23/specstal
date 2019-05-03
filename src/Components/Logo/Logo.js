@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom'
 
 const Logo = props =>{
     return(
-        <NavLink to="/" className={classes.logo__link}>
+        <NavLink to="/" className={classes.logo__link} aria-label = "Лого">
                     <div className={classes.logo}>
                             <div className={classes.logo__pic}></div>
                             <div className={classes.logo__text}>СпецСталь

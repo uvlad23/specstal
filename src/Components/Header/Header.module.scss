@@ -19,6 +19,8 @@
     display:flex;
     .active{
         border-bottom:2px solid rgba(0,163,239,.62);
+        pointer-events: none;
+        
     }
     a.menu__item{
         color:white;

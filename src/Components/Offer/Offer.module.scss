@@ -42,7 +42,13 @@
 }
 @media screen and (max-height: 768px) and (max-width: 1572px){
     .offer{
-        padding-top:15vh;
+        padding-top:20vh;
+        h1{
+            font-size:42px;
+        }
+        p{
+            font-size:28px;
+        }
     }
 }
 

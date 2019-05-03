@@ -20,7 +20,7 @@ const Products = props => {
                     <div className={classes.products__link}>
                     <img src={require('../../i/products/krug.jpg')} alt="Круг" className = {classes.products__image}/>
                     <div className={classes.products__overlay}>
-                        <NavLink to='/products/krug' className={classes.products__button}>Купить</NavLink>
+                        <NavLink to='/products/krug' className={classes.products__button} aria-label = "Купить">Купить</NavLink>
                     </div>
                     </div>
                 </li>
@@ -29,7 +29,7 @@ const Products = props => {
                     <div className={classes.products__link}>
                         <img src={require('../../i/products/polosa.jpg')} alt="Полоса" className = {classes.products__image}/>
                         <div className={classes.products__overlay}>
-                            <NavLink to='/products' className={classes.products__button}>Купить</NavLink>
+                            <NavLink to='/products' className={classes.products__button} aria-label = "Купить">Купить</NavLink>
                         </div>
                     </div>
                 </li>
@@ -38,7 +38,7 @@ const Products = props => {
                     <div className={classes.products__link}>
                         <img src={require('../../i/products/kvadrat.jpg')} alt="Квадрат" className = {classes.products__image}/>
                         <div className={classes.products__overlay}>
-                            <NavLink to='/products/kvadrat' className={classes.products__button}>Купить</NavLink>
+                            <NavLink to='/products/kvadrat' className={classes.products__button} aria-label = "Купить">Купить</NavLink>
                         </div>
                     </div>
                 </li>
@@ -47,7 +47,7 @@ const Products = props => {
                     <div className={classes.products__link}>
                         <img src={require('../../i/products/pokovka.jpg')} alt="Поковка" className = {classes.products__image}/>
                         <div className={classes.products__overlay}>
-                            <NavLink to='/products/pokovka' className={classes.products__button}>Купить</NavLink>
+                            <NavLink to='/products/pokovka' className={classes.products__button} aria-label = "Купить">Купить</NavLink>
                         </div>
                     </div>
                 </li>

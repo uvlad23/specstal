@@ -27,17 +27,17 @@ class Header extends React.Component{
 
                     <div>
                         <nav className={classes.menu}>
-                            <NavLink to="/" exact activeClassName = {classes.active} className={classes.menu__item}><div>Главная</div></NavLink>
-                            <NavLink to="/products" activeClassName = {classes.active} className={classes.menu__item}><div>Продукция</div></NavLink>
-                            <NavLink to="/contact" activeClassName = {classes.active} className={classes.menu__item}><div>Контакты</div></NavLink>
+                            <NavLink to="/" exact activeClassName = {classes.active} className={classes.menu__item} aria-label = "Главная"><div>Главная</div></NavLink>
+                            <NavLink to="/products" activeClassName = {classes.active} className={classes.menu__item} aria-label = "Продукция"><div>Продукция</div></NavLink>
+                            <NavLink to="/contact" activeClassName = {classes.active} className={classes.menu__item} aria-label = "Контакты"><div>Контакты</div></NavLink>
                         </nav>
                     </div>
-                    <NavLink to="/download" className={classes.download} activeClassName = {classes.active}><div>Скачать прайс <i className="fas fa-file-download"></i></div></NavLink>
+                    <NavLink to="/download" className={classes.download} activeClassName = {classes.active} aria-label = "Скачать прайс"><div>Скачать прайс <i className="fas fa-file-download"></i></div></NavLink>
                     <div className={classes.contacts}>
                         <div className={classes.contacts__address}><i className="fas fa-map-marker-alt"></i> ул.Войкова 58а. г. Никополь</div>
                         <div className={classes.contacts__phone}><i className="fas fa-phone"></i> +380 (67) 632 47 85</div>
                     </div>
-                    <a className={classes.make_call} href="tel:+380676324785"><i className="fas fa-phone"></i></a>
+                    <a className={classes.make_call} href="tel:+380676324785" aria-label = "Позвонить"><i className="fas fa-phone"></i></a>
                 </div>
                 <div className={classes.burger}>
                 
