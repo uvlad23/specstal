@@ -2,20 +2,20 @@
     &__header{
       display: flex;
       margin-bottom:5px;
+      color:white;
       img{
         width: 300px!important;
         align-self: center;
       }
       p{
         width: 100%;
+        padding-bottom:100px;
     }
     h2{
+      padding-top:100px;
       font-size:36px;
       margin-bottom:40px;
     }
-      div{
-        margin-left:10px;
-      }
     }
   }
   
@@ -31,7 +31,8 @@
   &__header{
     flex-direction: column;
     h2{
-      display: none;
+      
+
     }
     img{
       margin-top:10px;

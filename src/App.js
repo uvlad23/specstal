@@ -19,9 +19,9 @@ class App extends React.Component{
                     <Route path  = '/products/kvadrat' render = {() => <Products category = "Квадрат"/>}/>
                     <Route path  = '/products/krug' render = {() => <Products category = "Круг"/>}/>
                     <Route path = '/products/krug-blin' render = {() => <Products category = "Круг-блин"/>}/>
-                    <Route path exact = '/' render = {() => <MainPage/>}/>
                     <Route path = '/contact' render={() => {return (<Contact/>)}}/>
-                    <Route path  = '/products' render ={() => <Redirect to = '/products/polosa'/>}/>
+                    <Route path = '/products' render ={() => <Redirect to = '/products/polosa'/>}/>
+                    <Route path = '/' render = {() => <MainPage/>}/>
                 </Switch>
             </div>
         )

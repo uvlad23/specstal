@@ -3,16 +3,22 @@
 }
 
 .black__bg{
-    background-color: #1E1E1E;
+  background-color: #171717;
+}
+
+.darker__bg{
+  
+  background-color: #1E1E1E;
 }
 
 .products__info{
   display: flex;
+  flex-direction: column;
 }
 
 
 footer{
-  background: #1E1E1E;
+  background: #171717;
 }
 .products__table{
   width: 100%;

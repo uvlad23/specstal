@@ -1,9 +1,12 @@
 import React from 'react'
 import classes from './ProductsTableHeader.module.scss'
-import polosa from '../../i/products/polosa.jpg'
-import krug from '../../i/products/krug.jpg'
-import kvadrat from '../../i/products/kvadrat.jpg'
-import pokovka from '../../i/products/pokovka.jpg'
+
+import polosa from '../../i/products/bg/polosa.jpg'
+import krug from '../../i/products/bg/krug.jpg'
+import krugBlin from '../../i/products/bg/krug-blin.jpg'
+import kvadrat from '../../i/products/bg/kvadrat.jpg'
+import pokovka from '../../i/products/bg/pokovka.jpg'
+import utility from'./../../Layout/App/Container.module.scss'
 
 
 class ProductsTableHeader extends React.Component{
@@ -20,46 +23,38 @@ class ProductsTableHeader extends React.Component{
         },{
             category: 'Квадрат',
             img: kvadrat,
-            desc: `Квадрат стальной - это металлический профиль с формой разреза буквой "Г".`
+            desc: `Квадрат стальной - это металлический профиль с формой разреза буквой "Г". Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, et.`
         },{
             category: 'Круг',
             img: krug,
             desc: `Стальной круг – изделие, представляющее собой прут с круглым поперечным сечением различных диаметров`
         },{
             category: 'Круг-блин',
-            img: krug,
+            img: krugBlin,
             desc: `Стальной круг – изделие, представляющее собой прут с круглым поперечным сечением различных диаметров`
         },
         
             
         ]
     }
-
+//linear-gradient(0deg,rgba(255,0,150,0.3),rgba(255,0,150,0.3)),url(${item.img)
     render(){
         return(
             <>
-            <hr/>
-                <div className={classes.products__table__header}>
-                    {/* <img src={require('../../i/300.png')} alt="PlaceHolder"/>
-                        <div>
-                        <h2>{this.props.category}</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolorem ipsa accusantium velit veritatis, id dolorum earum quae necessitatibus sint hic numquam architecto laborum repudiandae voluptas molestias. Saepe, optio in.</p>
-                        </div> */}
-                        {this.state.productsHeaderData.map(item =>{
+                <div >
+                        {this.state.productsHeaderData.map((item, index) =>{
                             if (item.category === this.props.category){
                                 return(
-                                    <>
-                                    <img src={item.img} alt="PlaceHolder"/>
-                                    <div>
-                                    <h2>{item.category}</h2>
-                                    <p>{item.desc}</p>
+                                    <div className={classes.products__table__header} key = {index} style = {{background:`linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.6)),url(${item.img})`, backgroundRepeat: 'no-repeat',backgroundPosition: 'center',backgroundSize: 'cover'}}>
+                                        <div className = {utility.container}>
+                                        <h2 data-aos="fade-right" data-aos-duration="1000">{item.category}</h2>
+                                        <p data-aos="fade-right" data-aos-duration="1000">{item.desc}</p>
+                                        </div>
                                     </div>
-                                    </>
                                 )
                             }
                         })}
                 </div>
-            <hr/>
             </>
         )
     }

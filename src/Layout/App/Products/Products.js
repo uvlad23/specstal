@@ -13,6 +13,15 @@ import ProductsTable from '../../../Components/ProductsTable/ProductsTable'
 import ProductsNav from '../../../Components/ProductsNav/ProductsNav'
 import ProductsTableHeader from '../../../Components/ProductsTableHeader/ProductsTableHeader';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init({
+    disable: function() {
+      return /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
+    }
+});
+
 
 
 
@@ -77,11 +86,16 @@ class Products extends React.Component{
                         {backdrop}
                     </div>
                 </div>
-                <div className={utility.container}>
-                    <div className={classes.products__info}>
+                <div className={classes.darker__bg}>
+                    <div className={utility.container}>
                         <ProductsNav/>
+                    </div>
+                </div>
+                
+                    <div className={classes.products__info}>
+                    <ProductsTableHeader category = {this.props.category}/>
+                    <div className={utility.container}>
                         <div className={classes.products__table}>
-                            <ProductsTableHeader category = {this.props.category}/>
                             <ProductsTable data = {this.state.myData} category = {this.props.category}/>
                         </div>
                     </div>

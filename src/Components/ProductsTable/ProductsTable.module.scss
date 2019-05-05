@@ -1,16 +1,20 @@
 table{
     width: 100%;
+    border-collapse: collapse;
     transition: all 1s ease;
     margin-bottom:100px;
     table-layout: fixed;
     th{
-        background: #ccc;
-        padding:5px;
+        background-color: #f3f4f8;
+        padding:15px;
         font-size:18px;
     }
     td{
-        border:1px solid #ccc;
+        padding:10px;
         word-wrap:break-word
+    }
+    tr{
+        padding: 10px;
     }
     .skeleton{
         width: 100%;
