@@ -27,7 +27,15 @@
   }
   @media screen and (max-width: 650px){
     .container{
-      max-width: 355px;
+      max-width: 320px;
+      padding-left:10px;
+      padding-right:10px;
+      overflow: hidden;
+    }
+  }
+  @media screen and (max-width: 320px){
+    .container{
+      max-width: 300px;
       padding-left:10px;
       padding-right:10px;
       overflow: hidden;

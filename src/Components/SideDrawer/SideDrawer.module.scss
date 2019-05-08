@@ -1,6 +1,7 @@
 .side_drawer{
     height: 100%;
-    background: rgba(255,255,255,.9);
+    background: rgba(0, 0, 0, 0.9);
+    color:white;
     
     position: fixed;
     top:0;
@@ -26,8 +27,7 @@
         }
     }
     a{
-        color:black;
-        
+        color:white;
         text-decoration: none;
         font-size:24px;
         width: 100%;

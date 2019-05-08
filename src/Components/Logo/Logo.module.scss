@@ -6,7 +6,10 @@
         color:white;
         text-decoration: none;
     }
-    
+}
+
+.logo:hover ~ .logo__text{
+    font-size: 72px;
 }
 
 .logo__pic{

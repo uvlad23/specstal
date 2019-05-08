@@ -13,37 +13,37 @@ class ProductsTable extends React.Component{
                         <td>{item.pieces ? item.pieces : '-' }</td>
                         <td>{item.steeltype ? item.steeltype : '-'}</td>
                         <td>{item.weight ? item.weight : '-'}</td>
-                        <td>{item.price ? item.price : '-'}</td>
+                        <td>{item.price ? item.price : '-'} <i class="fas fa-calculator" style = {{color:'#ccc', marginLeft:'7px'}}></i></td>
                     </tr>
                 )
                 }
             }
         )
     }
+
     render(){
-        if (this.props.data){
             return(
                 <>
                 <h3>Каталог</h3>
-                <table style = {{textAlign:'center'}}>
-                <tr className = {classes.table__head}>
-                    <th>Размер</th>
-                    <th>шт.</th>
-                    <th>Тип стали</th>
-                    <th>В наличии/т.</th>
-                    <th>Цена/т. с НДС</th>
-                </tr>
-                    <tbody>
-                        {this.fetchData()}
-                    </tbody>
-                </table>
+                {this.props.data ? 
+                <>
+                    <table style = {{textAlign:'center'}}>
+                        <tbody>
+                        <tr className = {classes.table__head}>
+                            <th>Размер</th>
+                            <th>шт.</th>
+                            <th>Тип стали</th>
+                            <th>В наличии/т.</th>
+                            <th>Цена/т. с НДС</th>
+                        </tr>
+                            {this.fetchData()}
+                        </tbody>   
+                    </table>
+                    </> : <Skeleton count = {30} height = {30}/>}
                 </>
             )
-        } else{
-            return <Skeleton count = {30} height = {30} />
-        }
+        } 
     }
-}
 export default ProductsTable
     
     

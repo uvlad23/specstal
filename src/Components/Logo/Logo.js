@@ -10,7 +10,7 @@ const Logo = props =>{
                             <div className={classes.logo__text}>СпецСталь
                             <div className={classes.line}></div>
                             </div>
-                        </div>
+                    </div>
         </NavLink>
     )
 }

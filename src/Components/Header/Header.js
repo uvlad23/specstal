@@ -13,12 +13,28 @@ class Header extends React.Component{
     open() {
         this.menu.classList.toggle("show");
     }
+    
+    // componentDidMount(){
+    //     let header = document.getElementById("header");
+    //     let sticky = header.offsetTop;
+    //     window.onscroll = () => {
+    //         if (window.pageYOffset > sticky) {
+    //             header.classList.add(classes.sticky);
+    //           } else {
+    //             header.classList.remove(classes.sticky);
+    //           }
+    //     }
+    // };
+    
+    headerScrollHandler(){
+        
+    }
 
     render(props){
         if (!this.props.isOffer){
             return(
                 <div>                
-                <div className = {classes.header}>
+                <div className = {classes.header} id = "header">
                     <div className= {classes.drawer_toggle}>
                         <DrawerToggleButton click = {this.props.drawerClickHandler}/>
                     </div>

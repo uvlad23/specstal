@@ -11,10 +11,11 @@ table{
     }
     td{
         padding:10px;
-        word-wrap:break-word
+        word-wrap:break-word;
     }
     tr{
         padding: 10px;
+        border-bottom:1px solid #f3f4f8;
     }
     .skeleton{
         width: 100%;
