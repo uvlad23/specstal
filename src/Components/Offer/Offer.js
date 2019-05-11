@@ -16,7 +16,7 @@ const Offer = props =>{
         <h1 className={classes.offer__title} data-aos="fade-right" data-aos-duration="1000">Инструментальная сталь</h1>
         <p className={classes.offer__text} data-aos="fade-right" data-aos-duration="1000">Купи у надежного поставщика с доставкой<br/>
         по всей Украине и отгрузкой в тот же день</p>
-        <div className={classes.offer__btn} data-aos="fade-right" data-aos-duration="1000"><NavLink to="/products" aria-label = "Купить">Узнать больше</NavLink></div>
+        <div className={classes.offer__btn} data-aos="fade-right" data-aos-duration="1000"><NavLink to="/products" aria-label = "Купить">Купить</NavLink></div>
         </div>
     )
 }

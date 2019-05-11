@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './ProductsTable.module.scss'
 
 import Skeleton from 'react-loading-skeleton';
+import ReactTooltip from 'react-tooltip'
 
 class ProductsTable extends React.Component{
     fetchData(){
@@ -13,7 +14,13 @@ class ProductsTable extends React.Component{
                         <td>{item.pieces ? item.pieces : '-' }</td>
                         <td>{item.steeltype ? item.steeltype : '-'}</td>
                         <td>{item.weight ? item.weight : '-'}</td>
-                        <td>{item.price ? item.price : '-'} <i class="fas fa-calculator" style = {{color:'#ccc', marginLeft:'7px'}}></i></td>
+                        <td>{item.price ? item.price : '-'} {window.innerWidth >= '650' ?
+                        <i className="fas fa-calculator"><div className={classes.tooltiptext}>
+                        100кг = {parseInt(item.price.replace(/,/g, ''),10)/10}₴<br/>
+                        10кг = {parseInt(item.price.replace(/,/g, ''),10)/100}₴<br/>
+                        1кг = {parseInt(item.price.replace(/,/g, ''),10)/1000}₴</div></i> : null}
+                        
+                        </td>
                     </tr>
                 )
                 }
