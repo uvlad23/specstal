@@ -48,7 +48,7 @@ class Header extends React.Component{
                             <NavLink to="/contact" activeClassName = {classes.active} className={classes.menu__item} aria-label = "Контакты"><div>Контакты</div></NavLink>
                         </nav>
                     </div>
-                    <NavLink to="/download" className={classes.download} activeClassName = {classes.active} aria-label = "Скачать прайс"><div>Скачать прайс <i className="fas fa-file-download"></i></div></NavLink>
+                    <a href="https://firebasestorage.googleapis.com/v0/b/specstal-backend.appspot.com/o/%D0%9F%D1%80%D0%B0%D0%B9%D1%81.xls?alt=media&token=bfbe7e4b-0f99-41e1-8d1e-014f27571761" className={classes.download}  aria-label = "Скачать прайс"><div>Скачать прайс <i className="fas fa-file-download"></i></div></a>
                     <div className={classes.contacts}>
                         <div className={classes.contacts__address}><i className="fas fa-map-marker-alt"></i> ул.Войкова 58а. г. Никополь</div>
                         <div className={classes.contacts__phone}><i className="fas fa-phone"></i> +380 (67) 632 47 85</div>

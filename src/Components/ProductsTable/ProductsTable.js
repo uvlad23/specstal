@@ -2,7 +2,6 @@ import React from 'react'
 import classes from './ProductsTable.module.scss'
 
 import Skeleton from 'react-loading-skeleton';
-import ReactTooltip from 'react-tooltip'
 
 class ProductsTable extends React.Component{
     fetchData(){
@@ -19,7 +18,6 @@ class ProductsTable extends React.Component{
                         100кг = {parseInt(item.price.replace(/,/g, ''),10)/10}₴<br/>
                         10кг = {parseInt(item.price.replace(/,/g, ''),10)/100}₴<br/>
                         1кг = {parseInt(item.price.replace(/,/g, ''),10)/1000}₴</div></i> : null}
-                        
                         </td>
                     </tr>
                 )

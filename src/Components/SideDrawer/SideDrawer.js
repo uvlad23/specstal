@@ -13,7 +13,7 @@ const SideDrawer = props =>{
         <NavLink to="/" exact activeClassName = {classes.active} className={classes.menu__item}><div>Главная</div></NavLink>
         <NavLink to="/products" activeClassName = {classes.active} className={classes.menu__item}><div>Продукция</div></NavLink>
         <NavLink to="/contact" activeClassName = {classes.active} className={classes.menu__item}><div>Контакты</div></NavLink>
-        <NavLink to="/download" className={classes.download} activeClassName = {classes.active}><div>Скачать прайс <i className="fas fa-file-download"></i></div></NavLink>
+        <a href="https://firebasestorage.googleapis.com/v0/b/specstal-backend.appspot.com/o/%D0%9F%D1%80%D0%B0%D0%B9%D1%81.xls?alt=media&token=bfbe7e4b-0f99-41e1-8d1e-014f27571761" className={classes.download} ><div>Скачать прайс <i className="fas fa-file-download"></i></div></a>
         </nav>
     </nav>)
 }
