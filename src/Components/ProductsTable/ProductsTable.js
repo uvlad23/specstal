@@ -7,17 +7,18 @@ class ProductsTable extends React.Component{
     fetchData(){
             return this.props.data.map((item,index) => {
                 if(item.category === this.props.category){
+                    const price = item.price ? item.price + '' : '';
                     return(
                     <tr key = {index}>
                         <td>{item.measures ? item.measures : '-'}</td>
                         <td>{item.pieces ? item.pieces : '-' }</td>
                         <td>{item.steeltype ? item.steeltype : '-'}</td>
                         <td>{item.weight ? item.weight : '-'}</td>
-                        <td>{item.price ? item.price : '-'} {window.innerWidth >= '650' ?
+                        <td>{item.price ? item.price : '-'} {window.innerWidth >= '650' && price ?
                         <i className="fas fa-calculator"><div className={classes.tooltiptext}>
-                        100кг = {parseInt(item.price.replace(/,/g, ''),10)/10}₴<br/>
-                        10кг = {parseInt(item.price.replace(/,/g, ''),10)/100}₴<br/>
-                        1кг = {parseInt(item.price.replace(/,/g, ''),10)/1000}₴</div></i> : null}
+                        100кг = {parseInt(price.replace(/,/g, ''),10)/10}₴<br/>
+                        10кг = {parseInt(price.replace(/,/g, ''),10)/100}₴<br/>
+                        1кг = {parseInt(price.replace(/,/g, ''),10)/1000}₴</div></i> : null}
                         </td>
                     </tr>
                 )
